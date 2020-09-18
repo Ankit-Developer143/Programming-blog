@@ -3,12 +3,88 @@
 <!--Title Block-->
 {% block title%}index{% endblock %}
 
+{% block css %}
+
+body, html {
+height: 100%;
+margin: 0;
+margin-bottom:10%;
+background-color: whitesmoke;
+
+}
+
+.bg {
+padding-top:15px;
+background-image: url("/static/blog/laptop.jpg");
+height: 70%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.main{
+
+font: bold 300% Consolas, Monaco, monospace;
+border-right: .1em ;
+padding-top:20%;
+width: 16.5em;
+width: 21ch;
+margin-left: 35%;
+white-space: nowrap;
+overflow: hidden;
+-webkit-animation: typing 7s steps(40, end),
+.5s step-end infinite alternate;
+
+}
+.main{
+text-align: center;
+padding-bottom: 15%;
+color: white;"
+}
+
+{% endblock %}
 
 <!--Body Block-->
 {% block body %}
 
-<h1>Home Page</h1> 
+<div class="bg">
+  <div class="main">
+    <h1>Welcome To iCoder </h1>
+    <a role="button" class="btn btn-primary" href="/blog/java"> JAVA</a></button>
+    <a role="button" class="btn btn-primary" href="/blog/python"> PYTHON</a></button>
 
-<img src="/static/blog/simple.jpg" alt="" width="500px">
+  </div>
+</div>
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>Checkout Blog</h2>
+    <p class="lead">Then write a blog post about it. Or better yet, post these answers on your services pages to
+      increase your conversion rates. People are unlikely to buy or become a lead if their questions go unanswered.</p>
+
+
+    
+    <a href="https://github.com/Ankit-Developer143"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/ankit-singh-84b88a189/"><i class="fa fa-linkedin" style="font-size:48px;color:blue"></i></a>&nbsp;&nbsp;
+    &nbsp;&nbsp;
+    <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-address-gmail"></i></a>&nbsp;&nbsp;
+    <br>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 {% endblock %}

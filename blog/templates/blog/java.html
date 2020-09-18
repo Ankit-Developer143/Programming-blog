@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+
+{% block css %}  
+body{
+  background-color:black;
+}
+a:hover{
+  background-color: green;
+  border-radius:15px;
+
+}
+{% endblock %}
+
+{% block body %}
+{% load static %}
+
+
+
+
+
+
+<div class="container pb-3"  style=" background: linear-gradient( black 2%, cyan 10%);">
+    {% for j in java %}
+    &nbsp;
+    <div class="jumbotron">
+      <h1 class="display-4">{{j.language}}</h1>
+      <p class="lead">{{j.title}}</p>
+      <p class="lead"><h3>Topic Cover:{{j.overview}}</h3></p>
+      <p class="lead"><strong> Article By:</strong> {{j.author}}</p>
+      <hr class="my-4">
+      <p>{{j.content}}</p> 
+    </div>
+    <div class="article" style="border: solid 2px; padding: 10px; border-radius: 10px;back">
+    <h2 style="background-color: pink; color: black; border-radius: 5px;">Explanation</h2>
+    <p style="font-size: 20px;">{{j.slug}}<br><span id="dots"><b>{{j.timestamp}}</b></span><span id="more">{{j.desc}}</span></p>
+    </div>
+    {% endfor %}
+    </div><br><br><br>
+    
+    
+
+
+    {% endblock %}
+    
