@@ -1,5 +1,5 @@
 # Programming-blog
-Blog for sharing programming info
+Blog for sharing programming info  category wise
 
 
 
